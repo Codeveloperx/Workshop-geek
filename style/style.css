@@ -1,0 +1,42 @@
+#item-detalle{
+    width: 300px;
+}
+
+#item-detalle img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+#descripcion-detalle ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#descripcion-detalle p{
+    text-align: justify;
+}
+body{
+    width: 100%;
+}
+.subtitulo{
+    position: absolute;
+    height: 40px;
+    left: 37%;
+    top: 450px;
+}
+.section-card{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    justify-items: center;
+    margin-left: 40px;
+    top: 540px;
+}
+.card{
+    grid-area: 1;
+    width: 18rem;
+}
