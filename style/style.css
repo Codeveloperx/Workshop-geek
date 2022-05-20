@@ -1,0 +1,20 @@
+#item-detalle{
+    width: 300px;
+}
+
+#item-detalle img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+#descripcion-detalle ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#descripcion-detalle p{
+    text-align: justify;
+}
