@@ -35,8 +35,8 @@
                         </li>
                     </ul>
                     <div class="d-flex gap-3">
-                        <button type="button" class="btn"><img src="https://i.ibb.co/Rj59KNd/Vector.png"
-                                alt="user"></button>
+                        <a href="./pages/AgregarProducto.html" type="button" class="btn"><img src="https://i.ibb.co/Rj59KNd/Vector.png"
+                                alt="user"></a>
                         <button type="button" class="btn" id="liveToastBtn"><img
                                 src="https://i.ibb.co/3B8bSj1/Vector-1.png" alt="carrito"></button>
 
@@ -200,42 +200,46 @@
             </ul>
             <button id="btn1" class="btn btn-primary my-2">ADD TO CART</button>
             <button id="btn2" class="btn btn-primary mb-2" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 BUY IT NOW
             </button>
 
             <!--Off Canvas que aparece al dar click al botón Buy it now-->
 
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-                aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <div>
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Crown Sweatshirt</h5>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header d-flex flex-column gap-5 ms-2">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div class="d-flex gap-2">
+                        <div class="flex-shrink-0 w-25">
+                            <img class="img-fluid" src="https://i.ibb.co/rM9v0Xc/imagen1.png" alt="off-canvas">
+                        </div>                        
+                        <div class="d-flex flex-column justify-content-center gap-2">
+                            <h5 class="offcanvas-title fs-4 fw-bold lh-1" id="offcanvasExampleLabel">Crown Sweatshirt</h5>
+                            <span>$85.00</span>
+                        </div>
+                        <div id="input-canvas" class="d-flex flex-column justify-content-center ms-3">
+                            <input type="number">
+                            <button class="text-center">Remove</button>
+                        </div>                        
                     </div>
-
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    
                 </div>
-                <div class="offcanvas-body">
-                    <div>
-                        Some text as placeholder. In real life you can have the elements you have chosen. Like,
-                        text, images, lists, etc.
+                <div class="offcanvas-body ms-2 d-flex flex-column">
+                    <div class="my-5 d-flex justify-content-between">
+                        <h4 class="fs-3">Subtotal</h4>
+                        <span class="fs-4">$80.00</span>
                     </div>
-                    <div class="dropdown mt-3">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-bs-toggle="dropdown">
-                            Dropdown button
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <div class="gap-2 d-flex flex-column">
+                        <p class="text-center" style="font-size: 14px; ;">Shipping, taxes, and discount codes calculated at checkout.</p>
+                        <button id="btn3" class="btn btn-primary">CHECK OUT</button>
+                        <P class="text-center fw-bold" style="font-size: 15px;">Please Note: All items are pre-order and will ship in 6-10 weeks. Guaranteed holiday delivery.</P>
+
                     </div>
                 </div>
             </div>
             <!--Fin del offcanvas-->
 
-            <p class="my-5">
+            <p id="texto-detalle" class="my-5">
                 Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater. Throw
                 vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo on chest. Navy
                 crown print crew neck sweatshirt with white ribbed collar and waist band. Cotton/Poly blend.

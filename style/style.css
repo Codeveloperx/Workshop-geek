@@ -55,22 +55,20 @@ body {
 
 .imagen-section {
     display: flex;
-    position: relative;
-    top: 400px;
+    margin-top: 250px;      
 }
 
 .imagen-section-1 {
     width: 100%;
-    height: 700px;
+    object-fit: cover;
 }
 
 .footer {
     display: flex;
-    position: relative;
     background-color: black;
     height: 300px;
     width: 100%;
-    top: 450px;
+    margin-top: 64px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -109,5 +107,75 @@ body {
 }
 
 #btn1 {
-    background-color: black;
+    background-color: rgb(29, 29, 29);
+    font-size: 22px;
+    font-weight: 700;
+    border: 4px solid rgb(29, 29, 29);
+}
+
+#btn2,
+#btn3 {
+    background-color: rgb(66, 118, 251);
+    font-size: 22px;
+    font-weight: 700;
+    border: 4px solid rgb(66, 118, 251);
+}
+
+#btn1:hover {
+    background-color: white;
+    color: rgb(29, 29, 29);
+}
+
+#btn2:hover,
+#btn3:hover {
+    background-color: white;
+    color: rgb(66, 118, 251);
+}
+
+#texto-detalle {
+    font-size: 18px;
+}
+
+#product a {
+    color: rgb(29, 29, 29);
+    font-size: 18px;
+}
+
+.size {
+    font-size: 20px;
+}
+
+#input-canvas button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    border-top: 2px solid black;
+    width: 65%;
+}
+
+#input-canvas button:hover {
+    color: rgb(66, 118, 251);
+    font-size: 20px;
+}
+
+#input-canvas input {
+    border: none;
+    width: 65%;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#form{
+    margin: 100px;
 }
