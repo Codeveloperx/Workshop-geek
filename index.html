@@ -16,7 +16,7 @@
 <body>
     <!--Navbar-->
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img class="w-50 img-fluid" src="https://i.ibb.co/bdJqJLG/logo-w.png"
                         alt="logo"></a>
@@ -25,8 +25,8 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div id="menu-nav" class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 ms-5 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">SHOP</a>
                         </li>
@@ -35,125 +35,131 @@
                         </li>
                     </ul>
                     <div class="d-flex gap-3">
-                        <a href=""><img src="https://i.ibb.co/Rj59KNd/Vector.png" alt="user"></a>
-<<<<<<< HEAD
-                        <a href=""><img src="https://i.ibb.co/3B8bSj1/Vector-1.png" alt="carrito"></a>
+                        <button type="button" class="btn"><img src="https://i.ibb.co/Rj59KNd/Vector.png"
+                                alt="user"></button>
+                        <button type="button" class="btn" id="liveToastBtn"><img
+                                src="https://i.ibb.co/3B8bSj1/Vector-1.png" alt="carrito"></button>
+
+                        <!--Ventana modal del carrito-->
+
+                        <div class="toast-container position-fixed top-0 end-0 p-3">
+                            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-header">
+                                    <img src="https://i.ibb.co/3B8bSj1/Vector-1.png" alt="carrito">
+                                    <strong class="me-auto">Shopping Cart</strong>
+                                    <small>11 mins ago</small>
+                                    <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="toast-body">
+                                    <table id="shoppingCart" class="table table-condensed table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:60%">Product</th>
+                                                <th style="width:12%">Price</th>
+                                                <th style="width:10%">Quantity</th>
+                                                <th style="width:16%"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-th="Product">
+                                                    <div class="row">
+                                                        <div class="col-md-3 text-left">
+                                                            <img src="https://via.placeholder.com/250x250/5fa9f8/ffffff"
+                                                                alt=""
+                                                                class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                                        </div>
+                                                        <div class="col-md-9 text-left mt-sm-2">
+                                                            <h4>Product Name</h4>
+                                                            <p class="font-weight-light">Brand &amp; Name</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td data-th="Price">$49.00</td>
+                                                <td data-th="Quantity">
+                                                    <input type="number"
+                                                        class="form-control form-control-lg text-center" value="1">
+                                                </td>
+                                                <td class="actions" data-th="">
+                                                    <div class="text-right">
+                                                        <button
+                                                            class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                                            <i class="fas fa-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-th="Product">
+                                                    <div class="row">
+                                                        <div class="col-md-3 text-left">
+                                                            <img src="https://via.placeholder.com/250x250/5fa9f8/ffffff"
+                                                                alt=""
+                                                                class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                                        </div>
+                                                        <div class="col-md-9 text-left mt-sm-2">
+                                                            <h4>Product Name</h4>
+                                                            <p class="font-weight-light">Brand &amp; Name</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td data-th="Price">$49.00</td>
+                                                <td data-th="Quantity">
+                                                    <input type="number"
+                                                        class="form-control form-control-lg text-center" value="1">
+                                                </td>
+                                                <td class="actions" data-th="">
+                                                    <div class="text-right">
+                                                        <button
+                                                            class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                                            <i class="fas fa-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-th="Product">
+                                                    <div class="row">
+                                                        <div class="col-md-3 text-left">
+                                                            <img src="https://via.placeholder.com/250x250/5fa9f8/ffffff"
+                                                                alt=""
+                                                                class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                                        </div>
+                                                        <div class="col-md-9 text-left mt-sm-2">
+                                                            <h4>Product Name</h4>
+                                                            <p class="font-weight-light">Brand &amp; Name</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td data-th="Price">$49.00</td>
+                                                <td data-th="Quantity">
+                                                    <input type="number"
+                                                        class="form-control form-control-lg text-center" value="1">
+                                                </td>
+                                                <td class="actions" data-th="">
+                                                    <div class="text-right">
+                                                        <button
+                                                            class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                                            <i class="fas fa-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-=======
-                        <button type="button" class="btn" id="liveToastBtn"><a href=""><img src="https://i.ibb.co/3B8bSj1/Vector-1.png" alt="carrito"></a></button>
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="toast-container position-fixed top-0 end-0 p-3">
-              <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-header">
-                    <img src="https://i.ibb.co/3B8bSj1/Vector-1.png" alt="carrito">
-                  <strong class="me-auto">Shopping Cart</strong>
-                  <small>11 mins ago</small>
-                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body">
-                    <table id="shoppingCart" class="table table-condensed table-responsive">
-                        <thead>
-                            <tr>
-                                <th style="width:60%">Product</th>
-                                <th style="width:12%">Price</th>
-                                <th style="width:10%">Quantity</th>
-                                <th style="width:16%"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-th="Product">
-                                    <div class="row">
-                                        <div class="col-md-3 text-left">
-                                            <img src="https://via.placeholder.com/250x250/5fa9f8/ffffff" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
-                                        </div>
-                                        <div class="col-md-9 text-left mt-sm-2">
-                                            <h4>Product Name</h4>
-                                            <p class="font-weight-light">Brand &amp; Name</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td data-th="Price">$49.00</td>
-                                <td data-th="Quantity">
-                                    <input type="number" class="form-control form-control-lg text-center" value="1">
-                                </td>
-                                <td class="actions" data-th="">
-                                    <div class="text-right">
-                                        <button class="btn btn-white border-secondary bg-white btn-md mb-2">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-th="Product">
-                                    <div class="row">
-                                        <div class="col-md-3 text-left">
-                                            <img src="https://via.placeholder.com/250x250/5fa9f8/ffffff" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
-                                        </div>
-                                        <div class="col-md-9 text-left mt-sm-2">
-                                            <h4>Product Name</h4>
-                                            <p class="font-weight-light">Brand &amp; Name</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td data-th="Price">$49.00</td>
-                                <td data-th="Quantity">
-                                    <input type="number" class="form-control form-control-lg text-center" value="1">
-                                </td>
-                                <td class="actions" data-th="">
-                                    <div class="text-right">
-                                        <button class="btn btn-white border-secondary bg-white btn-md mb-2">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-th="Product">
-                                    <div class="row">
-                                        <div class="col-md-3 text-left">
-                                            <img src="https://via.placeholder.com/250x250/5fa9f8/ffffff" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
-                                        </div>
-                                        <div class="col-md-9 text-left mt-sm-2">
-                                            <h4>Product Name</h4>
-                                            <p class="font-weight-light">Brand &amp; Name</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td data-th="Price">$49.00</td>
-                                <td data-th="Quantity">
-                                    <input type="number" class="form-control form-control-lg text-center" value="1">
-                                </td>
-                                <td class="actions" data-th="">
-                                    <div class="text-right">
-                                        <button class="btn btn-white border-secondary bg-white btn-md mb-2">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    
-                </div>
-              </div>
-            </div>
-
->>>>>>> 35dd2ffbefaf81546e6c17098fdd92c75f1ad925
         </nav>
     </header>
 
 
     <!--seccion imagenes sueter-->
-    <section class="d-flex justify-content-around">
+    <section id="product" class="d-flex justify-content-around">
         <!--aside list-->
         <div class="d-flex justify-content-between">
             <div id="item-detalle" class="d-flex flex-column p-3 gap-3" id="list-example" class="list-group">
@@ -181,19 +187,19 @@
             </div>
         </div>
         <!--Info producto rigth aside-->
-        <div id="descripcion-detalle" class="d-flex flex-column w-50 m-5">
-            <h1>Crown Sweatshirt</h1>
+        <div id="descripcion-detalle" class="d-flex flex-column align-item-center w-50 m-5">
+            <h1 class="tittle-details">Crown Sweatshirt</h1>
             <h2>$80.00</h2>
-            <h3>Size</h3>
-            <ul>
-                <li>S</li>
-                <li>M</li>
-                <li>L</li>
-                <li>XL</li>
-                <li>XXL</li>
+            <h3 class="mt-4">Size</h3>
+            <ul class="my-4">
+                <li class="size">S</li>
+                <li class="size">M</li>
+                <li class="size">L</li>
+                <li class="size">XL</li>
+                <li class="size">XXL</li>
             </ul>
-            <button>ADD TO CART</button>
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+            <button id="btn1" class="btn btn-primary my-2">ADD TO CART</button>
+            <button id="btn2" class="btn btn-primary mb-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
                 aria-controls="offcanvasExample">
                 BUY IT NOW
             </button>
@@ -229,7 +235,7 @@
             </div>
             <!--Fin del offcanvas-->
 
-            <p>
+            <p class="my-5">
                 Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater. Throw
                 vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo on chest. Navy
                 crown print crew neck sweatshirt with white ribbed collar and waist band. Cotton/Poly blend.
@@ -239,58 +245,52 @@
         </div>
     </section>
 
-<<<<<<< HEAD
-    <div class="subtitulo"><h2>YOU MAY ALSO LIKE</h2></div>
-    <section class="section-card">
-        <div class="card text-center">
-            <a ><img id="imagen" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
-            <div class="card-body">
-            <p class="card-text"><strong> Fresh Stripe Sweater<br> $85.00</strong></p>
+    <!--Seccion You may also like-->
+
+    <section class="d-flex flex-column align-content-between">
+        <h2 class="tittle my-5">YOU MAY ALSO LIKE</h2>
+        <section class="section-card">
+            <div class="card text-center">
+                <a><img id="imagen" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
+                <div class="card-body">
+                    <p class="card-text"><strong> Fresh Stripe Sweater<br> $85.00</strong></p>
+                </div>
             </div>
-        </div>
-        <div class="card text-center">
-            <a ><img id="imagen1" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
-            <div class="card-body">
-            <p class="card-text"><strong> Fresh Black Tie-Dye Hoodie<br> $75.00</strong></p>
+            <div class="card text-center">
+                <a><img id="imagen1" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
+                <div class="card-body">
+                    <p class="card-text"><strong> Fresh Black Tie-Dye Hoodie<br> $75.00</strong></p>
+                </div>
             </div>
-        </div>
-        <div class="card text-center">
-            <a ><img id="imagen2" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
-            <div class="card-body">
-            <p class="card-text"><strong>Pose For It Tee<br> $45.00</strong></p>
+            <div class="card text-center">
+                <a><img id="imagen2" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
+                <div class="card-body">
+                    <p class="card-text"><strong>Pose For It Tee<br> $45.00</strong></p>
+                </div>
             </div>
-        </div>
-=======
+        </section>
+    </section>
+
+    <!--Imagen de Príncipe fresco-->
+
     <section>
         <div class="imagenes-compra"></div>
         <div class="description"></div>
->>>>>>> 35dd2ffbefaf81546e6c17098fdd92c75f1ad925
     </section>
     <div class="imagen"></div>
+
+    <!--footer-->
+
     <footer class="footer">
         <h2 class="titulo">Principe Fresco</h2>
     </footer>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
-
-
-<<<<<<< HEAD
-
     <script src="./script/script.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-
-
-
-
-=======
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./script/products.js" type="module"></script>
->>>>>>> 35dd2ffbefaf81546e6c17098fdd92c75f1ad925
+    <script src="./script/products.js" type="module"></script>
 </body>
 
 </html>
