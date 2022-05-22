@@ -55,7 +55,7 @@ body {
 
 .imagen-section {
     display: flex;
-    margin-top: 250px;      
+    margin-top: 250px;
 }
 
 .imagen-section-1 {
@@ -176,6 +176,6 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-#form{
+#form {
     margin: 100px;
 }

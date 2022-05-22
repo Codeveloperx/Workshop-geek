@@ -31,7 +31,7 @@
                             <a class="nav-link active" aria-current="page" href="#">SHOP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">COLLECTION</a>
+                            <a class="nav-link active" href="#collection">COLLECTION</a>
                         </li>
                     </ul>
                     <div class="d-flex gap-3">
@@ -251,28 +251,50 @@
 
     <!--Card Inicio-->
 
-    <section class="d-flex flex-column align-content-between">
+    <section id="collection" class="d-flex flex-column align-content-between mt-5">
         <h2 class="tittle my-5">YOU MAY ALSO LIKE</h2>
-        <section class="section-card">
-            <div class="card text-center">
-                <a><img id="imagen" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
-                <div class="card-body">
-                    <p class="card-text"><strong> Fresh Stripe Sweater<br> $85.00</strong></p>
-                </div>
+
+        <!--Carousel para mostrar los producto-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <section class="w-100 section-card">
+                    <div class="card text-center">
+                        <a><img id="imagen" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
+                        <div class="card-body">
+                            <p class="card-text"><strong> Fresh Stripe Sweater<br> $85.00</strong></p>
+                        </div>
+                    </div>
+                    <div class="card text-center">
+                        <a><img id="imagen1" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
+                        <div class="card-body">
+                            <p class="card-text"><strong> Fresh Black Tie-Dye Hoodie<br> $75.00</strong></p>
+                        </div>
+                    </div>
+                    <div class="card text-center">
+                        <a><img id="imagen2" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
+                        <div class="card-body">
+                            <p class="card-text"><strong>Pose For It Tee<br> $45.00</strong></p>
+                        </div>
+                    </div>
+                </section>
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
             </div>
-            <div class="card text-center">
-                <a><img id="imagen1" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
-                <div class="card-body">
-                    <p class="card-text"><strong> Fresh Black Tie-Dye Hoodie<br> $75.00</strong></p>
-                </div>
-            </div>
-            <div class="card text-center">
-                <a><img id="imagen2" src=" " alt="imagenes de camisa fresh" class="card-img-top"></a>
-                <div class="card-body">
-                    <p class="card-text"><strong>Pose For It Tee<br> $45.00</strong></p>
-                </div>
-            </div>
-        </section>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>      
     </section>
     <!--Card fin-->
     <!--Imagen section Inicio-->
