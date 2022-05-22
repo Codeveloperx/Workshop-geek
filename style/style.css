@@ -26,6 +26,10 @@ body {
     object-fit: cover;
 }
 
+#item-detalle img:hover{
+    border: 1px solid black;
+}
+
 
 #descripcion-detalle ul {
     list-style: none;
