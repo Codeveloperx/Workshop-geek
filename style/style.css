@@ -47,9 +47,12 @@ body {
     display: grid;
     position: relative;
     grid-template-columns: repeat(3, 1fr);
-    width: 90%;
-    justify-items: center;
-    margin-left: 40px;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+.section-card::-webkit-scrollbar{
+    width: 0;
 }
 
 .card {
@@ -182,4 +185,73 @@ input[type=number] {
 
 #form {
     margin: 100px;
+}
+
+
+.shopping-cart{
+    position: absolute;
+    top:110%; right:-110%;
+    padding:1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width:35rem;
+    background: #fff;
+    border: 1px solid #19191919;
+}
+.shopping-cart.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+    margin:1rem 0;
+}
+
+.shopping-cart .box img{
+    height:10rem;
+}
+
+.shopping-cart .box .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top:50%; right:2rem;
+    cursor: pointer;
+    color:var(--light-color);
+    transform: translateY(-50%);
+}
+
+.shopping-cart .box .fa-trash:hover{
+    color:var(--orange);
+}
+
+.shopping-cart .box .content h3{
+    color:var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.shopping-cart .box .content span{
+    color:var(--light-color);
+    font-size: 1.6rem;
+}
+
+.shopping-cart .box .content .quantity{
+    padding-left: 1rem;
+}
+
+.shopping-cart .total{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    text-align: center;
+    color:var(--black);
+}
+
+.shopping-cart .btn{
+    display: block;
+    text-align: center;
+    margin:1rem;
 }
